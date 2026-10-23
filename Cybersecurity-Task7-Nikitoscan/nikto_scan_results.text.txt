@@ -1,0 +1,23 @@
+- Nikto v2.6.0/
++ Target Host: 10.75.115.58
++ Target Port: 80
++ GET /DVWA/: Suggested security header missing: x-content-type-options. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options: 
++ GET /DVWA/: Suggested security header missing: content-security-policy. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP: 
++ GET /DVWA/: Suggested security header missing: strict-transport-security. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security: 
++ GET /DVWA/: Suggested security header missing: permissions-policy. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy: 
++ GET /DVWA/: Suggested security header missing: referrer-policy. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy: 
++ GET /DVWA/config/: Directory indexing found.
++ GET /DVWA/config/: Configuration information may be available remotely.
++ GET /DVWA/tests/: Directory indexing found.
++ GET /DVWA/tests/: This might be interesting.
++ GET /DVWA/database/: Directory indexing found.
++ GET /DVWA/database/: Database directory found.
++ GET /DVWA/docs/: Directory indexing found.
++ GET /DVWA/login.php: Admin login page/section found.
++ GET /DVWA/.git/index: Git Index file may contain directory listing information.
++ GET /DVWA/.git/HEAD: Git HEAD file found. Full repo details may be present.
++ GET /DVWA/.git/config: Git config file found. Infos about repo details may be present.
++ GET /DVWA/.gitignore: .gitignore file found. It is possible to grasp the directory structure.
++ GET /DVWA/.dockerignore: .dockerignore file found. It may be possible to grasp the directory structure and learn more about the site.
++ GET /DVWA/: X-Frame-Options header is deprecated and was replaced with the Content-Security-Policy HTTP header with the frame-ancestors directive. See: https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Frame-Options: 
++ GET /DVWA/: The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type. See: https://www.netsparker.com/web-vulnerability-scanner/vulnerabilities/missing-content-type-header/: 
