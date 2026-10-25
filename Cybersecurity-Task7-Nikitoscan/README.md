@@ -237,6 +237,18 @@ I committed `nikto_scan_results.txt` to this folder in the `OIBSIP` repository.
 
 ![SSL scan attempt](screenshots/06-ssl-scan-attempt.png)
 
+
+## References
+
+1. OWASP Foundation. *OWASP Top 10:2021*. https://owasp.org/Top10/
+2. OWASP Foundation. *OWASP Top 10:2025*. https://owasp.org/Top10/2025/
+3. Nikto web server scanner. https://github.com/sullo/nikto and https://cirt.net/Nikto2
+4. DVWA (Damn Vulnerable Web Application). https://github.com/digininja/DVWA
+5. Nmap Project. *Nmap: the Network Mapper*. https://nmap.org/
+6. Apache HTTP Server documentation. *Core features* (`Options`, `ServerTokens`, `ServerSignature`). https://httpd.apache.org/docs/2.4/mod/core.html
+7. MDN Web Docs. *HTTP headers* (`Content-Security-Policy`, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `Strict-Transport-Security`, `X-Frame-Options`). https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+8. ByteMonk. *HTTP Secure Headers for Web App Security | CORS, CSP, HSTS and more*. YouTube. https://www.youtube.com/watch?v=4bQeGUzHpOE
+
 ## Files in This Folder
 
 - `README.md`: this report
