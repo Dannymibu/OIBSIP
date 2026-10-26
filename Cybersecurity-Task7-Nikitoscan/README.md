@@ -1,5 +1,8 @@
 # Task 7: Vulnerability Web Scanning with Nikto
 
+## Demo video
+https://youtube.com/shorts/5byI_9nCdH8?si=T36ah24wH4hvt13G
+
 ## Objective
 
 Use Nikto to scan an intentionally vulnerable web application (DVWA), identify the issues it reports, explain the risk of each, and rate the severity of each finding.
