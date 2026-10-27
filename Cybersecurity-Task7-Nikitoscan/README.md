@@ -29,7 +29,7 @@ I scanned only my own DVWA instance, running in my own virtual machine. No third
 
 ## Environment
 
-- **Host:** VMware virtual machine running Kali Linux
+- **Host:** Vertual BOX virtual machine running Kali Linux
 - **Network:** NAT, so DVWA was isolated from the external network
 - **Target:** DVWA (Damn Vulnerable Web Application) at `http://10.75.115.58/DVWA/`
 - **Stack:** Apache 2.4.66, PHP 8.4, MariaDB
@@ -139,9 +139,9 @@ Nmap is a network scanning tool, whereas Nikto is a web server vulnerability sca
 
 ## Steps Performed
 
-### 1. Set up the VMware lab
+### 1. Set up the VirtualBox lab
 
-I prepared a Kali Linux VM in VMware. The network adapter was set to NAT.
+I prepared a Kali Linux VM in a VirtualBox. The network adapter was set to NAT.
 
 ### 2. Downloaded DVWA from GitHub
 
