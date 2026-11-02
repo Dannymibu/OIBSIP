@@ -1,2 +1,74 @@
-#CYBER SECURITY TASK 8 WIRESHARK SCAN
+# Task 8: Capture Network Traffic with Wireshark
 
+## Objective
+To capture live network traffic using Wireshark, apply filters to isolate specific protocols, analyse packet contents, and document my findings with security observations.
+
+## Environment
+- Kali Linux running in a VirtualBox virtual machine
+- Tool: Wireshark 4.6.4 (preinstalled on Kali Linux)
+- Target: DVWA (Damn Vulnerable Web Application), running on my own machine
+
+## Authorization
+I captured traffic only on my own virtual machine and my own DVWA instance. I did not capture traffic on public Wi-Fi, a university network, or any network I do not own or administer.
+
+## Steps Performed
+
+1. I checked the Wireshark version with `wireshark --version`. Wireshark came preinstalled on Kali Linux. Administrator permissions are required to capture packets.
+2. I started Apache2 and MariaDB so that DVWA would be available:
+   ```
+   sudo systemctl start apache2 mariadb
+   ```
+3. I started Wireshark with `wireshark &`.
+4. I captured traffic on both the loopback interface and eth0, so that my local DVWA traffic and my internet traffic were recorded in the same file.
+5. I applied the display filter `http` and took a screenshot.
+6. I applied the display filter `dns` and took a screenshot.
+7. I applied the display filter `tcp` and took a screenshot.
+8. I labelled the TCP screenshot with the SYN, SYN-ACK and ACK packets of the three-way handshake.
+9. I exported the capture as `wireshark_capture.pcap`.
+10. I highlighted packet 212, an HTTP packet, and examined what it reveals.
+
+## Capture Details
+- Capture length: at least 2 minutes
+- Output file: `wireshark_capture.pcap`
+
+## TCP Three-Way Handshake
+In the first packet (SYN), the client tells the server that its sequence numbers start from zero. In the second packet (SYN-ACK), the server replies that its own sequence starts from zero, and that it expects the client's next sequence number to be 1. In the last packet (ACK), the client replies with a sequence number of 1 and tells the server that it expects the server's next sequence number to be 1.
+
+Wireshark shows relative sequence numbers, so both sides appear to start from zero. The real starting numbers are large random values.
+
+![TCP handshake](screenshots/tcp-handshake-annotated.png)
+
+## Unencrypted Data: Packet 212
+Packet 212 is an HTTP POST request to `/DVWA/login.php`. It reveals the username and the password of the user in plain text.
+
+![HTTP packet 212](screenshots/http-packet-212.png)
+
+## HTTP
+HTTP sends data in plain text. If a user logs in through a form, the username and password can be seen easily.
+
+### Why it is dangerous
+An attacker who intercepts the data packets being transferred can access the user's credentials and log in as that user.
+
+### How HTTPS prevents it
+HTTPS helps prevent eavesdropping by using a secure connection that encrypts all the data with an encryption key.
+
+## Screenshots
+![HTTP filter](screenshots/http-filter.png)
+![DNS filter](screenshots/dns-filter.png)
+![TCP filter](screenshots/tcp-filter.png)
+
+## Glossary
+
+| Term | Meaning |
+|---|---|
+| Packet | A piece of data that carries the address of where it is coming from and where it is going |
+| Protocol | A set of rules that tells how data should be sent and received |
+| Port | A number that uniquely identifies a service or an application on a device |
+| Payload | The actual data being sent |
+| Handshake | A process that prepares the client and server before any meaningful data is sent |
+
+## Conclusion
+This task showed me how much information can be read from network traffic. Using filters made it easy to isolate HTTP, DNS and TCP packets, and packet 212 showed how a login sent over HTTP exposes the username and password. It also showed why websites should use HTTPS.
+
+## References
+- Wireshark User Guide: https://www.wireshark.org/docs/wsug_html_chunked/
