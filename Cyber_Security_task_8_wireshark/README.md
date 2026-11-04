@@ -3,6 +3,9 @@
 ## Objective
 To capture live network traffic using Wireshark, apply filters to isolate specific protocols, analyse packet contents, and document my findings with security observations.
 
+## Demo Video
+https://lnkd.in/p/d8zcV9gp
+
 ## Environment
 - Kali Linux running in a VirtualBox virtual machine
 - Tool: Wireshark 4.6.4 (preinstalled on Kali Linux)
