@@ -36,12 +36,12 @@ In the first packet (SYN), the client tells the server that its sequence numbers
 
 Wireshark shows relative sequence numbers, so both sides appear to start from zero. The real starting numbers are large random values.
 
-![TCP handshake](screenshots/tcp-handshake-annotated.png)
+![TCP handshake](screenshots/3-way hand shake.png)
 
 ## Unencrypted Data: Packet 212
 Packet 212 is an HTTP POST request to `/DVWA/login.php`. It reveals the username and the password of the user in plain text.
 
-![HTTP packet 212](screenshots/http-packet-212.png)
+![HTTP packet 212](screenshots/http filter.png)
 
 ## HTTP
 HTTP sends data in plain text. If a user logs in through a form, the username and password can be seen easily.
@@ -53,9 +53,9 @@ An attacker who intercepts the data packets being transferred can access the use
 HTTPS helps prevent eavesdropping by using a secure connection that encrypts all the data with an encryption key.
 
 ## Screenshots
-![HTTP filter](screenshots/http-filter.png)
-![DNS filter](screenshots/dns-filter.png)
-![TCP filter](screenshots/tcp-filter.png)
+![HTTP filter](screenshots/http filter.png)
+![DNS filter](screenshots/dns filter.png)
+![TCP filter](screenshots/tcp filter.png)
 
 ## Glossary
 
