@@ -63,7 +63,7 @@ curl http://127.0.1.1
 ```
 The connection failed, confirming that UFW was blocking the traffic rather than Apache simply not responding.
 
-![HTTP blocked test](screenshots/test-http-blocked.png)
+![HTTP blocked test](screenshots/HTTP-blocked.jpg)
 
 ## Verifying Active Rules
 ```
