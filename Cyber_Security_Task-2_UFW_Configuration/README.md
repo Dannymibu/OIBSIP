@@ -74,8 +74,8 @@ sudo ufw status verbose
 
 ## Screenshots
 ![UFW installed](screenshots/ufw-installed.png)
-![UFW status verbose](ufw-status-verbose.png)
-![HTTP blocked test](screenshots/HTTP-locked-test.png)
+![UFW status verbose](screenshots/ufw-status-verbose.png)
+![HTTP blocked test](screenshots/HTTP-blocked-test.png)
 
 ## Conclusion
 This task showed how a small set of firewall rules can control exactly what traffic reaches a machine. Allowing SSH and HTTPS while denying HTTP and Telnet reflects a simple principle: allow only what is necessary and secure, and block what is unnecessary or insecure.
